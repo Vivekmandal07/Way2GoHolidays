@@ -1,4 +1,4 @@
-Tourly - Travel agancy
+Way2GoHolidays - Travel agancy
 
 # HEADER
 
@@ -6,7 +6,7 @@ Tourly - Travel agancy
 For Further Inquires :
 +01 (123) 4567 90
 
-alt = Tourly logo
+alt = Way2GoHolidays logo
 
 aria-label = Search
 <ion-icon name="search"></ion-icon>
@@ -18,7 +18,7 @@ aria-label = Open Menu
 <ion-icon name="logo-twitter"></ion-icon>
 <ion-icon name="logo-youtube"></ion-icon>
 
-alt = Tourly logo
+alt = Way2GoHolidays logo
 
 aria-label = Close Menu
 <ion-icon name="close-outline"></ion-icon>
@@ -175,7 +175,7 @@ Contact Us !
 
 # FOOTER
 
-alt = Tourly logo
+alt = Way2GoHolidays logo
 
 Urna ratione ante harum provident, eleifend, vulputate molestiae proin fringilla, praesentium magna conubia at perferendis, pretium, aenean aut ultrices.
 
