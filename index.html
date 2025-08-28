@@ -160,7 +160,58 @@
 
         </nav>
 
-        <button class="btn btn-primary">Book Now</button>
+        <button class="btn btn-primary" id="bookNowBtn">Book Now</button>
+
+        <!-- Booking Modal -->
+        <div id="bookingModal" class="modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.4);">
+          <div style="background:#fff; margin:3% auto; padding:32px 32px 24px 32px; border-radius:12px; max-width:700px; width:90%; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+            <span id="closeModal" style="position:absolute; top:18px; right:32px; font-size:32px; font-weight:bold; color:#333; cursor:pointer;">&times;</span>
+            <h2 style="margin-bottom:24px; text-align:center;">Book Your Trip</h2>
+            <form id="bookingForm">
+              <div style="margin-bottom:16px;">
+                <input id="modalName" type="text" name="name" required placeholder="Name" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+              </div>
+              <div style="margin-bottom:16px;">
+                <input id="modalEmail" type="email" name="email" required placeholder="Email" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+              </div>
+              <div style="margin-bottom:16px;">
+                <input id="modalPhone" type="tel" name="phone" required placeholder="Phone Number" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+              </div>
+              <div style="margin-bottom:16px;">
+                <select id="modalDestination" name="destination" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+                  <option value="" disabled selected>Destination (Country)</option>
+                  <option value="Thailand">Thailand</option>
+                  <option value="Dubai">Dubai</option>
+                  <option value="Bali">Bali</option>
+                  <option value="Vietnam">Vietnam</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Jaipur">Jaipur</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Rishikesh">Rishikesh</option>
+                  <option value="Varanasi">Varanasi</option>
+                  <option value="Andaman">Andaman</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div style="margin-bottom:16px;">
+                <input id="modalDate" type="date" name="date" required placeholder="Date of Travel" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+              </div>
+              <div style="margin-bottom:16px;">
+                <input id="modalPax" type="number" name="pax" required min="1" placeholder="No. of Pax" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+              </div>
+              <div style="margin-bottom:16px;">
+                <input id="modalChild" type="number" name="child" min="0" value="0" placeholder="Number of Children" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+              </div>
+              <div id="childAgesContainer" style="margin-bottom:16px;"></div>
+              <div style="margin-bottom:24px;">
+                <textarea id="modalRequest" name="request" placeholder="Special Request" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; min-height:60px;"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%; font-size:18px; padding:12px 0;">Submit</button>
+              
+            </form>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -972,6 +1023,65 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+  <script>
+    // Modal logic
+    const bookNowBtn = document.getElementById('bookNowBtn');
+    const bookingModal = document.getElementById('bookingModal');
+    const closeModal = document.getElementById('closeModal');
+    bookNowBtn.onclick = function() {
+      bookingModal.style.display = 'block';
+    };
+    closeModal.onclick = function() {
+      bookingModal.style.display = 'none';
+    };
+    window.onclick = function(event) {
+      if (event.target == bookingModal) bookingModal.style.display = 'none';
+    };
+
+    // Dynamic child age fields
+    const childInput = document.getElementById('modalChild');
+    const childAgesContainer = document.getElementById('childAgesContainer');
+    childInput.addEventListener('input', function() {
+      const num = parseInt(childInput.value) || 0;
+      childAgesContainer.innerHTML = '';
+      for (let i = 1; i <= num; i++) {
+        const ageInput = document.createElement('input');
+        ageInput.type = 'number';
+        ageInput.name = `child_age_${i}`;
+        ageInput.min = '0';
+        ageInput.max = '18';
+        ageInput.placeholder = `Child ${i} Age`;
+        ageInput.style = 'width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; margin-bottom:8px;';
+        childAgesContainer.appendChild(ageInput);
+      }
+    });
+
+    // Form submit logic
+    document.getElementById('bookingForm').onsubmit = function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const name = form.name.value;
+      const email = form.email.value;
+      const phone = form.phone.value;
+      const destination = form.destination.value;
+      const date = form.date.value;
+      const pax = form.pax.value;
+      const child = form.child.value;
+      let childAges = '';
+      for (let i = 1; i <= (parseInt(child)||0); i++) {
+        childAges += `Child ${i} Age: ${form[`child_age_${i}`]?.value || ''}\n`;
+      }
+      const request = form.request.value;
+      // WhatsApp prefilled message
+      const whatsappMsg = encodeURIComponent(
+        `Booking Request:%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0ADestination: ${destination}%0ADate of Travel: ${date}%0ANo. of Pax: ${pax}%0ANumber of Children: ${child}%0A${childAges.replace(/\n/g,'%0A')}Special Request: ${request}`
+      );
+      window.open(`https://wa.me/7303402841?text=${whatsappMsg}`, '_blank');
+      bookingModal.style.display = 'none';
+      form.reset();
+      childAgesContainer.innerHTML = '';
+    };
+  </script>
 
   <!-- 
     - ionicon link
