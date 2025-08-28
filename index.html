@@ -1073,9 +1073,17 @@
       }
       const request = form.request.value;
       // WhatsApp prefilled message
-      const whatsappMsg = encodeURIComponent(
-        `Booking Request:%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0ADestination: ${destination}%0ADate of Travel: ${date}%0ANo. of Pax: ${pax}%0ANumber of Children: ${child}%0A${childAges.replace(/\n/g,'%0A')}Special Request: ${request}`
-      );
+      let msg = `Booking Request\n`;
+      msg += `Name: ${name}\n`;
+      msg += `Email: ${email}\n`;
+      msg += `Phone: ${phone}\n`;
+      msg += `Destination: ${destination}\n`;
+      msg += `Date of Travel: ${date}\n`;
+      msg += `No. of Pax: ${pax}\n`;
+      msg += `Number of Children: ${child}\n`;
+      msg += childAges;
+      msg += `Special Request: ${request}`;
+      const whatsappMsg = encodeURIComponent(msg.replace(/\n/g, '%0A'));
       window.open(`https://wa.me/7303402841?text=${whatsappMsg}`, '_blank');
       bookingModal.style.display = 'none';
       form.reset();
