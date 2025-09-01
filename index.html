@@ -1083,8 +1083,8 @@
       msg += `Number of Children: ${child}\n`;
       msg += childAges;
       msg += `Special Request: ${request}`;
-      const whatsappMsg = encodeURIComponent(msg.replace(/\n/g, '%0A'));
-      window.open(`https://wa.me/7303402841?text=${whatsappMsg}`, '_blank');
+      // const whatsappMsg = encodeURIComponent(msg.r'));
+      window.open(`https://wa.me/7303402841?text=${msg}`, '_blank');
       bookingModal.style.display = 'none';
       form.reset();
       childAgesContainer.innerHTML = '';
