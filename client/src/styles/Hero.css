@@ -1,0 +1,73 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+  padding: var(--space-xl) 0;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(var(--overlay-bg), var(--overlay-bg)),
+                    url('/assets/images/hero-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+  animation: scaleIn var(--transition-slow);
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: var(--space-xl);
+  animation: fadeIn var(--transition-normal);
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+  line-height: 1.2;
+  animation: slideUp var(--transition-normal);
+}
+
+.hero-text {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-bottom: var(--space-xl);
+  opacity: 0.9;
+  animation: slideUp var(--transition-normal);
+  animation-delay: 0.2s;
+}
+
+.hero-cta {
+  animation: scaleIn var(--transition-normal);
+  animation-delay: 0.4s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .hero-content {
+    padding: var(--space-lg);
+  }
+
+  .hero-background {
+    background-attachment: scroll;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+  .hero-background {
+    background-attachment: scroll;
+  }
+}
