@@ -58,9 +58,50 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="header-bottom">
-        <div className="container">
-          {/* Social Links for larger screens */}
+      <nav className={`navbar ${isNavbarActive ? 'active' : ''}`}>
+        <div className="navbar-top">
+          <Link to="/" className="logo" onClick={() => setIsNavbarActive(false)}>
+            <h3 className="h3">Way2GoHolidays</h3>
+          </Link>
+          <button 
+            className="nav-close-btn" 
+            aria-label="Close Menu"
+            onClick={toggleNavbar}
+          >
+            <FaTimes />
+          </button>
+        </div>
+
+        <ul className="navbar-list">
+          <li>
+            <a href="#home" className="navbar-link" onClick={toggleNavbar}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#destination" className="navbar-link" onClick={toggleNavbar}>
+              Destinations
+            </a>
+          </li>
+          <li>
+            <a href="#package" className="navbar-link" onClick={toggleNavbar}>
+              Packages
+            </a>
+          </li>
+          <li>
+            <a href="#gallery" className="navbar-link" onClick={toggleNavbar}>
+              Gallery
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="navbar-link" onClick={toggleNavbar}>
+              Contact
+            </a>
+          </li>
+        </ul>
+
+        {/* Social Links for mobile menu */}
+        <div className="navbar-social">
           <ul className="social-list">
             <li>
               <a 
@@ -93,104 +134,19 @@ const Header = () => {
               </a>
             </li>
           </ul>
-
-          {/* Navigation */}
-          <nav className={`navbar ${isNavbarActive ? 'active' : ''}`}>
-            <div className="navbar-top">
-              <Link to="/" className="logo" onClick={() => setIsNavbarActive(false)}>
-                <h3 className="h3">Way2GoHolidays</h3>
-              </Link>
-              <button 
-                className="nav-close-btn" 
-                aria-label="Close Menu"
-                onClick={toggleNavbar}
-              >
-                <FaTimes />
-              </button>
-            </div>
-
-            <ul className="navbar-list">
-              <li>
-                <a href="#home" className="navbar-link" onClick={toggleNavbar}>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#destination" className="navbar-link" onClick={toggleNavbar}>
-                  Destinations
-                </a>
-              </li>
-              <li>
-                <a href="#package" className="navbar-link" onClick={toggleNavbar}>
-                  Packages
-                </a>
-              </li>
-              <li>
-                <a href="#gallery" className="navbar-link" onClick={toggleNavbar}>
-                  Gallery
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="navbar-link" onClick={toggleNavbar}>
-                  Contact
-                </a>
-              </li>
-            </ul>
-
-            {/* Social Links for mobile menu */}
-            <div className="navbar-social">
-              <ul className="social-list">
-                <li>
-                  <a 
-                    href="https://wa.me/7303402841" 
-                    className="social-link" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <FaWhatsapp />
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="https://www.instagram.com/way2goholidays" 
-                    className="social-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaInstagram />
-                  </a>
-                </li>
-                <li>
-                  <a 
-                    href="https://www.facebook.com/share/19trXGBbaS" 
-                    className="social-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaFacebookF />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-
-          {/* Overlay */}
-          {isNavbarActive && (
-            <div className="overlay" onClick={toggleNavbar}></div>
-          )}
-
-          {/* Book Now Button */}
-          <button 
-            className="btn btn-primary"
-            onClick={() => {
-              setIsNavbarActive(false);
-              // Add your booking modal logic here
-            }}
-          >
-            Book Now
-          </button>
         </div>
-      </div>
+
+        {/* Book Now Button */}
+        <button 
+          className="btn btn-primary"
+          onClick={() => {
+            setIsNavbarActive(false);
+            // Add your booking modal logic here
+          }}
+        >
+          Book Now
+        </button>
+      </nav>
     </header>
   );
 };

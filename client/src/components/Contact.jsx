@@ -1,3 +1,5 @@
+import '../styles/Contact.css';
+
 const Contact = () => {
   return (
     <section className="contact" id="contact">

@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <img src="/assets/images/logo.svg" alt="Way2GoHolidays" className="footer-logo" />
+              {/* <img src="/assets/images/logo.svg" alt="Way2GoHolidays" className="footer-logo" /> */}
               <p className="footer-text">
                 Making your travel dreams come true.
               </p>

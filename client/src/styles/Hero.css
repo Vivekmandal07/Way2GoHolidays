@@ -8,25 +8,17 @@
   color: var(--white);
   text-align: center;
   padding: var(--space-xl) 0;
-  overflow: hidden;
-}
-
-.hero-background {
-  position: absolute;
-  inset: 0;
   background-image: linear-gradient(var(--overlay-bg), var(--overlay-bg)),
                     url('/assets/images/hero-banner.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  z-index: -1;
-  animation: scaleIn var(--transition-slow);
 }
 
-.hero-content {
+.hero .container {
   max-width: 800px;
   padding: var(--space-xl);
-  animation: fadeIn var(--transition-normal);
+  z-index: 1;
 }
 
 .hero-title {
@@ -45,29 +37,77 @@
   animation-delay: 0.2s;
 }
 
-.hero-cta {
-  animation: scaleIn var(--transition-normal);
+.btn-group {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  animation: fadeIn var(--transition-normal);
   animation-delay: 0.4s;
 }
 
-/* Responsive Styles */
+.btn {
+  padding: var(--space-md) var(--space-xl);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--transition-normal),
+              background-color var(--transition-normal);
+  min-width: 160px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+
 @media (max-width: 768px) {
   .hero {
     padding: var(--space-lg) var(--space-md);
+    background-attachment: scroll;
   }
 
-  .hero-content {
+  .hero .container {
     padding: var(--space-lg);
   }
 
-  .hero-background {
-    background-attachment: scroll;
+  .btn-group {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .btn {
+    width: 100%;
+    min-width: unset;
   }
 }
 
 /* Touch Device Optimizations */
 @media (hover: none) {
-  .hero-background {
+  .hero {
     background-attachment: scroll;
   }
 }
