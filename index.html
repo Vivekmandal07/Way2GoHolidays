@@ -998,6 +998,41 @@
 
   </footer>
 
+  <!-- 
+    - #FLOATING WHATSAPP BUTTON
+  -->
+  <style>
+  #floatingWhatsappBtn {
+    position: fixed;
+    right: 24px;
+    bottom: 84px; /* above the go-top arrow */
+    z-index: 99999;
+    background: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    cursor: pointer;
+    font-size: 32px;
+    transition: box-shadow 0.2s;
+  }
+  #floatingWhatsappBtn:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.28);
+  }
+</style>
+<div id="floatingWhatsappBtn" title="Chat with us on WhatsApp">
+  <ion-icon name="logo-whatsapp"></ion-icon>
+</div>
+<script>
+  document.getElementById('floatingWhatsappBtn').onclick = function() {
+    window.open('https://wa.me/7303402841', '_blank');
+  };
+</script>
+
 
 
 
@@ -1007,98 +1042,20 @@
   -->
 
   <a href="#top" class="go-top" data-go-top>
-    <ion-icon name="chevron-up-outline"></ion-icon>
+    <ion-icon name="chevron-up-outline" role="img" class="md hydrated" aria-lable="chevron-up-outline"></ion-icon>
   </a>
-
-
-
-
-
   <!-- 
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
-  <script>
-    // Modal logic
-    const bookNowBtn = document.getElementById('bookNowBtn');
-    const bookNowBtnHero = document.getElementById('bookNowBtnHero');
-    const bookingModal = document.getElementById('bookingModal');
-    const closeModal = document.getElementById('closeModal');
-    if (bookNowBtn) {
-      bookNowBtn.onclick = function() {
-        bookingModal.style.display = 'block';
-      };
-    }
-    if (bookNowBtnHero) {
-      bookNowBtnHero.onclick = function() {
-        bookingModal.style.display = 'block';
-      };
-    }
-    closeModal.onclick = function() {
-      bookingModal.style.display = 'none';
-    };
-    window.onclick = function(event) {
-      if (event.target == bookingModal) bookingModal.style.display = 'none';
-    };
 
-    // Dynamic child age fields
-    const childInput = document.getElementById('modalChild');
-    const childAgesContainer = document.getElementById('childAgesContainer');
-    childInput.addEventListener('input', function() {
-      const num = parseInt(childInput.value) || 0;
-      childAgesContainer.innerHTML = '';
-      for (let i = 1; i <= num; i++) {
-        const ageInput = document.createElement('input');
-        ageInput.type = 'number';
-        ageInput.name = `child_age_${i}`;
-        ageInput.min = '0';
-        ageInput.max = '18';
-        ageInput.placeholder = `Child ${i} Age`;
-        ageInput.style = 'width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; margin-bottom:8px;';
-        childAgesContainer.appendChild(ageInput);
-      }
-    });
-
-    // Form submit logic
-    document.getElementById('bookingForm').onsubmit = function(e) {
-      e.preventDefault();
-      const form = e.target;
-      const name = form.name.value;
-      const email = form.email.value;
-      const phone = form.phone.value;
-      const destination = form.destination.value;
-      const date = form.date.value;
-      const pax = form.pax.value;
-      const child = form.child.value;
-      let childAges = '';
-      for (let i = 1; i <= (parseInt(child)||0); i++) {
-        childAges += `Child ${i} Age: ${form[`child_age_${i}`]?.value || ''}\n`;
-      }
-      const request = form.request.value;
-      // WhatsApp prefilled message
-      let msg = `Booking Request\n`;
-      msg += `Name: ${name}\n`;
-      msg += `Email: ${email}\n`;
-      msg += `Phone: ${phone}\n`;
-      msg += `Destination: ${destination}\n`;
-      msg += `Date of Travel: ${date}\n`;
-      msg += `No. of Pax: ${pax}\n`;
-      msg += `Number of Children: ${child}\n`;
-      msg += childAges;
-      msg += `Special Request: ${request}`;
-      const whatsappMsg = encodeURIComponent(msg);
-      window.open(`https://wa.me/7303402841?text=${whatsappMsg}`, '_blank');
-      bookingModal.style.display = 'none';
-      form.reset();
-      childAgesContainer.innerHTML = '';
-    };
-  </script>
 
   <!-- 
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 
 </body>
 
