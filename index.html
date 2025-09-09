@@ -242,7 +242,7 @@
     </p>
     <div class="btn-group">
       <button class="btn btn-primary">Learn more</button>
-      <button class="btn btn-secondary">Book now</button>
+      <button class="btn btn-secondary" id="bookNowBtnHero">Book now</button>
     </div>
   </div>
 </section>
@@ -1021,11 +1021,19 @@
   <script>
     // Modal logic
     const bookNowBtn = document.getElementById('bookNowBtn');
+    const bookNowBtnHero = document.getElementById('bookNowBtnHero');
     const bookingModal = document.getElementById('bookingModal');
     const closeModal = document.getElementById('closeModal');
-    bookNowBtn.onclick = function() {
-      bookingModal.style.display = 'block';
-    };
+    if (bookNowBtn) {
+      bookNowBtn.onclick = function() {
+        bookingModal.style.display = 'block';
+      };
+    }
+    if (bookNowBtnHero) {
+      bookNowBtnHero.onclick = function() {
+        bookingModal.style.display = 'block';
+      };
+    }
     closeModal.onclick = function() {
       bookingModal.style.display = 'none';
     };
