@@ -1033,6 +1033,46 @@
   };
 </script>
 
+  <!-- 
+    - BOOKING MODAL SCRIPT
+  -->
+
+<script>
+  // Wait for DOM to load
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get elements
+    const bookNowBtn = document.getElementById('bookNowBtn');
+    const bookNowBtnHero = document.getElementById('bookNowBtnHero');
+    const bookingModal = document.getElementById('bookingModal');
+    const closeModal = document.getElementById('closeModal');
+
+    // Open modal from header button
+    if (bookNowBtn) {
+      bookNowBtn.onclick = function() {
+        bookingModal.style.display = 'block';
+      };
+    }
+    // Open modal from hero button
+    if (bookNowBtnHero) {
+      bookNowBtnHero.onclick = function() {
+        bookingModal.style.display = 'block';
+      };
+    }
+    // Close modal
+    if (closeModal) {
+      closeModal.onclick = function() {
+        bookingModal.style.display = 'none';
+      };
+    }
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      if (event.target == bookingModal) {
+        bookingModal.style.display = 'none';
+      }
+    }
+  });
+</script>
+
 
 
 
