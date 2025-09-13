@@ -1276,7 +1276,14 @@ address {
 
 
 }
+/* Floating WhatsApp Button */
 
+@media (max-width: 768px) {
+  #floatingWhatsappBtn {
+    right: 18px;  /* smaller space from right */
+    bottom: 70px; /* adjust as needed */
+  }
+}
 
 
 
