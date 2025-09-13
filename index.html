@@ -221,7 +221,6 @@
 
 
 
-
   <main>
     <article>
 
@@ -1033,111 +1032,118 @@
   };
 </script>
 
-
-
-
   <!-- 
-    - BOOKING MODAL SCRIPT
+    - #BOOKING MODAL
   -->
+  <style>
+    /* Modal styles */
+    #bookingModal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+  </style>
+  <div id="bookingModal">
+    <div style="display:flex; justify-content:center; align-items:center; height:100%;">
+
+
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const bookNowBtn = document.getElementById('bookNowBtn');
-    const bookNowBtnHero = document.getElementById('bookNowBtnHero');
-    const bookingModal = document.getElementById('bookingModal');
-    const closeModal = document.getElementById('closeModal');
+document.addEventListener("DOMContentLoaded", function () {
+  const bookNowBtn = document.getElementById("bookNowBtn");
+  const bookingModal = document.getElementById("bookingModal");
+  const closeModal = document.getElementById("closeModal");
+  const bookingForm = document.getElementById("bookingForm");
+  const childInput = document.getElementById("modalChild");
+  const childAgesContainer = document.getElementById("childAgesContainer");
 
-    // Open modal from header button
-    if (bookNowBtn) {
-      bookNowBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        bookingModal.style.display = 'block';
-      });
-    }
-    // Open modal from hero button
-    if (bookNowBtnHero) {
-      bookNowBtnHero.addEventListener('click', function(e) {
-        e.preventDefault();
-        bookingModal.style.display = 'block';
-      });
-    }
-    // Close modal
-    if (closeModal) {
-      closeModal.addEventListener('click', function() {
-        bookingModal.style.display = 'none';
-      });
-    }
-    // Close modal when clicking outside the modal content
-    if (bookingModal) {
-      bookingModal.addEventListener('click', function(event) {
-        if (event.target === bookingModal) {
-          bookingModal.style.display = 'none';
-        }
-      });
+  // Open modal
+  bookNowBtn.addEventListener("click", function () {
+    bookingModal.style.display = "block";
+  });
+
+  // Close modal
+  closeModal.addEventListener("click", function () {
+    bookingModal.style.display = "none";
+  });
+
+  // Close modal when clicking outside content
+  window.addEventListener("click", function (event) {
+    if (event.target == bookingModal) {
+      bookingModal.style.display = "none";
     }
   });
-</script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // 1. Dynamic child age fields
-    const childInput = document.getElementById('modalChild');
-    const childAgesContainer = document.getElementById('childAgesContainer');
-    if (childInput && childAgesContainer) {
-      childInput.addEventListener('input', function() {
-        const num = parseInt(childInput.value) || 0;
-        childAgesContainer.innerHTML = '';
-        for (let i = 1; i <= num; i++) {
-          const ageInput = document.createElement('input');
-          ageInput.type = 'number';
-          ageInput.name = `child_age_${i}`;
-          ageInput.min = '0';
-          ageInput.max = '18';
-          ageInput.placeholder = `Child ${i} Age`;
-          ageInput.style = 'width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; margin-bottom:8px;';
-          childAgesContainer.appendChild(ageInput);
-        }
-      });
-    }
-
-    // 2. WhatsApp redirect with pre-filled message
-    const bookingForm = document.getElementById('bookingForm');
-    if (bookingForm) {
-      bookingForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const name = bookingForm.name.value;
-        const email = bookingForm.email.value;
-        const phone = bookingForm.phone.value;
-        const destination = bookingForm.destination.value;
-        const date = bookingForm.date.value;
-        const pax = bookingForm.pax.value;
-        const child = bookingForm.child.value;
-        const request = bookingForm.request.value;
-        let childAges = '';
-        for (let i = 1; i <= (parseInt(child) || 0); i++) {
-          const age = bookingForm[`child_age_${i}`] ? bookingForm[`child_age_${i}`].value : '';
-          childAges += `Child ${i} Age: ${age}\n`;
-        }
-        let msg = `Booking Request\n`;
-        msg += `Name: ${name}\n`;
-        msg += `Email: ${email}\n`;
-        msg += `Phone: ${phone}\n`;
-        msg += `Destination: ${destination}\n`;
-        msg += `Date of Travel: ${date}\n`;
-        msg += `No. of Pax: ${pax}\n`;
-        msg += `Number of Children: ${child}\n`;
-        msg += childAges;
-        msg += `Special Request: ${request}`;
-        const whatsappMsg = encodeURIComponent(msg);
-        window.open(`https://wa.me/7303402841?text=${whatsappMsg}`, '_blank');
-        // Optionally close modal and reset form
-        document.getElementById('bookingModal').style.display = 'none';
-        bookingForm.reset();
-        childAgesContainer.innerHTML = '';
-      });
+  // Dynamically add child age fields
+  childInput.addEventListener("input", function () {
+    childAgesContainer.innerHTML = "";
+    const childCount = parseInt(this.value) || 0;
+    for (let i = 1; i <= childCount; i++) {
+      const input = document.createElement("input");
+      input.type = "number";
+      input.name = `child_age_${i}`;
+      input.placeholder = `Child ${i} Age`;
+      input.style =
+        "width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; margin-top:8px;";
+      childAgesContainer.appendChild(input);
     }
   });
+
+  // Form submit → WhatsApp
+  bookingForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Get values directly
+    const name = document.getElementById("modalName").value;
+    const email = document.getElementById("modalEmail").value;
+    const phone = document.getElementById("modalPhone").value;
+    const destination = document.getElementById("modalDestination").value;
+    const date = document.getElementById("modalDate").value;
+    const pax = document.getElementById("modalPax").value;
+    const child = document.getElementById("modalChild").value;
+    const request = document.getElementById("modalRequest").value;
+
+    // Collect child ages
+    let childAges = "";
+    for (let i = 1; i <= (parseInt(child) || 0); i++) {
+      const ageField = document.querySelector(`[name="child_age_${i}"]`);
+      if (ageField) {
+        childAges += `Child ${i} Age: ${ageField.value}\n`;
+      }
+    }
+
+    // WhatsApp formatted message
+    let msg = "Booking Request\n\n";
+    msg += `Name: ${name}\n`;
+    msg += `Email: ${email}\n`;
+    msg += `Phone: ${phone}\n`;
+    msg += `Destination: ${destination}\n`;
+    msg += `Date of Travel: ${date}\n`;
+    msg += `No. of Pax: ${pax}\n`;
+    msg += `Number of Children: ${child}\n`;
+    msg += childAges;
+    msg += `Special Request: ${request}`;
+
+    // Debug → show final message in console
+    console.log("WhatsApp message:", msg);
+
+    // WhatsApp number (with country code, no +)
+    const whatsappNumber = "917303402841";
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`;
+
+    window.open(whatsappURL, "_blank");
+  });
+});
 </script>
+
+
+
 
 
 
