@@ -167,7 +167,10 @@ body { background: var(--white); }
   border-color: var(--yale-blue);
 }
 
-.btn-secondary { border-color: var(--white); }
+.btn-secondary { 
+  background: transparent;
+  border-color: var(--white); 
+}
 
 .btn-secondary:is(:hover, :focus) { background: hsla(0, 0%, 100%, 0.1); }
 
@@ -266,7 +269,7 @@ body { background: var(--white); }
 
 .header-top .logo { margin-inline: auto; }
 
-.header-top .logo img { max-width: 100px; }
+.header-top .logo img { max-width: 150px; }
 
 .header-btn-group {
   justify-self: flex-end;
