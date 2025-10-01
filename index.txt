@@ -4,7 +4,7 @@ Way2GoHolidays - Travel agancy
 
 <ion-icon name="call-outline"></ion-icon>
 For Further Inquires :
-+01 (123) 4567 90
++91 7303402841
 
 alt = Way2GoHolidays logo
 
@@ -38,7 +38,11 @@ Book Now
 
 Journey to explore world
 
-Ac mi duis mollis. Sapiente? Scelerisque quae, penatibus? Suscipit class corporis nostra rem quos voluptatibus habitant? Fames, vivamus minim nemo enim, gravida lobortis quasi, eum.
+⛰️✨ Adventure is calling, and the world is waiting 🌍✈️. 
+      Whether it’s 🏖️ beaches, 🏔️ mountains, 
+      or 🌆 city escapes, Way2GoHolidays brings every journey to life 💫. 
+      🧳🌴 Explore deeper, 🌟 travel smarter, 
+      and ❤️ embrace unforgettable moments 🌅🌸.
 
 Learn more
 Book now
@@ -67,9 +71,9 @@ Uncover place
 
 Popular destination
 
-Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium. Sit ornare mollitia tenetur, aptent.
+✨Discover must-visit spots around the world that travelers can’t stop talking about. Start your next adventure here.Every destination is handpicked to inspire, excite, and create unforgettable memories.
 
-alt = San miguel, italy
+alt = Thailand
 
 <ion-icon name="star"></ion-icon>
 <ion-icon name="star"></ion-icon>
@@ -77,23 +81,24 @@ alt = San miguel, italy
 <ion-icon name="star"></ion-icon>
 <ion-icon name="star"></ion-icon>
 
-Italy
+Thailand
 
-San miguel
+Bangkok & Phuket
 
-Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+Discover the vibrant street life, stunning beaches, and rich culture of Thailand. Perfect for adventure and relaxation.
 
-alt = Burj khalifa, dubai
 
-Dubai
+alt = Dubai
 
-Burj khalifa
+Burj Khalifa & Desert Safari
 
-alt = Kyoto temple, japan
+Experience luxury shopping, iconic skyscrapers, and thrilling desert adventures in dazzling Dubai.
 
-Japan
+alt = Bali
 
-Kyoto temple
+Bali
+
+Ubud & Seminyak
 
 More destintion
 
@@ -105,24 +110,24 @@ Popular Packeges
 
 Checkout Our Packeges
 
-Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium. Sit ornare mollitia tenetur, aptent.
+Discover the perfect plan tailored to your needs. Whether you're just getting started or scaling up, we've got a package designed just for you..
 
-alt = Experience The Great Holiday On Beach
+alt = Experience The Great Holiday On Pattaya Beach (Thailand)
 
-Experience The Great Holiday On Beach
+Experience The Great Holiday On Pattaya Beach (Thailand)
 
-Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque, cras, aspernatur.
+Unwind on golden sands, enjoy thrilling water sports, and experience the vibrant nightlife of Pattaya Beach. Indulge in delicious local cuisine, explore the pattaya coral islands, and make memories that last a lifetime.
 
 <ion-icon name="time"></ion-icon>
-7D/6N
+3N/4D
 
 <ion-icon name="people"></ion-icon>
-pax: 10
+pax: 2
 
 <ion-icon name="location"></ion-icon>
-Malaysia
+Pattaya
 
-(25 reviews)
+(35 reviews)
 
 <ion-icon name="star"></ion-icon>
 <ion-icon name="star"></ion-icon>
@@ -130,20 +135,19 @@ Malaysia
 <ion-icon name="star"></ion-icon>
 <ion-icon name="star"></ion-icon>
 
-$750
+₹25,000
 / per person
 
 Book Now
 
-alt = Summer Holiday To The Oxolotan River
-Summer Holiday To The Oxolotan River
-(20 reviews)
-$520
+alt = get the Great Experience of Burjkhalifa
+(40 reviews)
+
 
 alt = Santorini Island's Weekend Vacation
 Santorini Island's Weekend Vacation
 (40 reviews)
-$660
+₹35,000
 
 
 View All Packages
@@ -155,7 +159,7 @@ View All Packages
 Photo Gallery
 Photo's From Travellers
 
-Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium. Sit ornare mollitia tenetur, aptent.
+Discover the amazing moments captured by our travellers. From breathtaking landscapes to unforgettable experiences, these snapshots bring their journeys to life. Explore the adventures, feel the excitement, and get inspired for your next trip.
 
 alt = Gallery image
 
@@ -167,7 +171,7 @@ Call To Action
 
 Ready For Unforgatable Travel. Remember Us!
 
-Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium. Sit ornare mollitia tenetur, aptent.
+Embark on journeys filled with adventure, relaxation, and unforgettable memories. With Way2GoHolidays, every trip is crafted to give you experiences you’ll cherish forever. Let us make your travel dreams a reality!
 
 Contact Us !
 
@@ -177,20 +181,21 @@ Contact Us !
 
 alt = Way2GoHolidays logo
 
-Urna ratione ante harum provident, eleifend, vulputate molestiae proin fringilla, praesentium magna conubia at perferendis, pretium, aenean aut ultrices.
+"Way2GoHolidays is dedicated to making your travel dreams come true. From exotic getaways to hassle-free planning, we ensure every journey is smooth, memorable, and filled with experiences you’ll cherish forever.
 
 Contact Us
 
 Feel free to contact and reach us !!
+Way2GoHolidays
 
 <ion-icon name="call-outline"></ion-icon>
-+01 (123) 4567 90
++91 7303402841
 
 <ion-icon name="mail-outline"></ion-icon>
-info.tourly.com
+way2goholidays.bookings@gmail.com
 
 <ion-icon name="location-outline"></ion-icon>
-3146 Koontz, California
+New Delhi
 
 Subscribe our newsletter for more update & news !!
 
@@ -198,7 +203,7 @@ placeholder = Enter Your Email
 
 Subscribe
 
-&copy; 2022 codewithsadee. All rights reserved
+&copy; 2022 codewithphantom. All rights reserved
 
 Privacy Policy 
 Term & Condition 

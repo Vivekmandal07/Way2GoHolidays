@@ -1,15 +1,12 @@
 <div align="center">
   
-  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/tourly)
-  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/tourly?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/tourly?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-  [![YouTube Video Views](https://img.shields.io/youtube/views/FYFmQEpZywc?style=social)](https://youtu.be/FYFmQEpZywc)
+
+  
 
   <br />
   <br />
   
-  <img src="./readme-images/project-logo.png" />
+  <img src="./readme-images/A way2goholidays logo.png" />
 
   <h2 align="center">Way2GoHolidays - Travel website</h2>
 
@@ -23,8 +20,8 @@
 
 ### Demo Screeshots
 
-![Way2GoHolidays Desktop Demo](./readme-images/desktop.png "Desktop Demo")
-
+![Way2GoHolidays Desktop Demo](./readme-images/Desktop.png "Desktop Demo")
+![Way2GoHolidays Logo Imaage](./readme-mage/Logo-blue.png "Logo Image")
 ### Prerequisites
 
 Before you begin, ensure you have met the following requirements:
