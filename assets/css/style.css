@@ -13,7 +13,7 @@
 .header-top .logo .hero-title {
   color: var(--white);
 }
-.logo .hero-title {
+.logo{
   display: flex;
   align-items: center;
   justify-content: space-between;
