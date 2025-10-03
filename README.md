@@ -13,7 +13,7 @@
 
   Way2GoHolidays is fully responsive travel website, <br />Responsive for all devices, built using HTML, CSS, and JavaScript.
 
-  <a href="https://vivekmandal07.github.io/Way2GoHolidays/"><strong>➥ Live Demo</strong></a>
+  <a href="https://way2goholidays.vercel.app"><strong>➥ Live Demo</strong></a>
 
 </div>
 
