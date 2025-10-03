@@ -6,7 +6,7 @@
   <br />
   <br />
   
-  <img src="./readme-images/A way2goholidays logo.png" />
+  <img src="./readme-images/logo-blue.png" />
 
   <h2 align="center">Way2GoHolidays - Travel website</h2>
 
