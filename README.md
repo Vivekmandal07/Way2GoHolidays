@@ -21,7 +21,7 @@
 
 ### Demo Screeshots
 
-![Way2GoHolidays Logo Image](./readme-images/Desktop.png "Logo Image")
+![Way2GoHolidays Desktop Image](./readme-images/image.png "Desktop Image")
 ### Prerequisites
 
 Before you begin, ensure you have met the following requirements:
