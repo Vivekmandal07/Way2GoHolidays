@@ -21,13 +21,7 @@
 
 ### Demo Screeshots
 
-<figure alt="Desktop>
-<img src="./readme-images/Desktop.png" />
-
-</figure>
-
-
-![Way2GoHolidays Logo Image](./readme-images/Logo-blue.png "Logo Image")
+![Way2GoHolidays Logo Image](./readme-images/Desktop.png "Logo Image")
 ### Prerequisites
 
 Before you begin, ensure you have met the following requirements:
