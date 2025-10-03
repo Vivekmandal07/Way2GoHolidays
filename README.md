@@ -5,8 +5,9 @@
 
   <br />
   <br />
-  
-  <img src="./readme-images/logo-blue.png" />
+  <figure alt="Desktop img">
+  <img src="./readme-images/Logo-blue.png" />
+  <figure>
 
   <h2 align="center">Way2GoHolidays - Travel website</h2>
 
@@ -21,7 +22,7 @@
 ### Demo Screeshots
 
 ![Way2GoHolidays Desktop Demo](./readme-images/Desktop.png "Desktop Demo")
-![Way2GoHolidays Logo Imaage](./readme-mage/Logo-blue.png "Logo Image")
+![Way2GoHolidays Logo Image](./readme-images/Logo-blue.png "Logo Image")
 ### Prerequisites
 
 Before you begin, ensure you have met the following requirements:
