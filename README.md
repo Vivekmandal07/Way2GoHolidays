@@ -21,7 +21,7 @@
 
 ### Demo Screeshots
 
-<figure>
+<figure alt="Desktop>
 <img src="./readme-images/Desktop.png" />
 
 </figure>
