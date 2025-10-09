@@ -708,6 +708,51 @@ body { background: var(--white); }
 .cta .section-text { font-size: var(--fs-5); }
 
 
+.glow-btn {
+  position: relative;
+  padding: 18px 30px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  background: #1e40af; /* Deep blue */
+  border: white;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.glow-btn::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, #e91e17c9, #9b3cb8, #c0bd06, #e91e17c9);
+  background-size: 300%;
+  border-radius: 60px;
+  z-index: -1;
+  animation: glowing-border 4s linear infinite;
+  opacity: 0.8;
+}
+
+.glow-btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 180, 216, 0.5); 
+}
+
+@keyframes glowing-border {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+
+
+
 
 
 
