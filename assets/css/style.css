@@ -498,7 +498,13 @@ body { background: var(--white); }
   height: 430px;
 }
 
-.popular-card .card-img { height: 100%; }
+.card-img {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+.popular-card .card-img { 
+  height: 100%; 
+}
 
 .popular-card .card-img img {
   width: 100%;
