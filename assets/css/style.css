@@ -12,6 +12,7 @@
 /* Make menu bar heading white */
 .header-top .logo .hero-title {
   color: var(--white);
+  margin-top: 13px;
 }
 .logo{
   display: flex;
@@ -203,7 +204,7 @@ body { background: var(--white); }
 .h2 { font-size: var(--fs-2); }
 
 .h3 {
-  font-size: var(--fs-3);
+  font-size: var(--fs-2);
   font-weight: var(--fw-700);
 }
 
@@ -249,9 +250,9 @@ body { background: var(--white); }
   top: 0;
   left: 0;
   width: 100%;
-  transition: var(--transition);
-  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
-  padding-block: 15px;
+  /* transition: var(--transition); */
+  /* border-bottom: 1px solid hsla(0, 0%, 100%, 0.1); */
+  /* padding-block: 15px; */
   z-index: 1;
 }
 
@@ -298,7 +299,10 @@ body { background: var(--white); }
 
 .search-btn { font-size: 20px; }
 
-.header-bottom { border-bottom: 1px solid hsla(0, 0%, 100%, 0.1); }
+.header-bottom {
+   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+   border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+}
 
 .header-bottom .container {
   display: flex;
@@ -1223,7 +1227,7 @@ address {
   .nav-open-btn,
   .navbar-top { display: none; }
 
-  .header-bottom { border-bottom: none; }
+  /* .header-bottom { border-bottom: none; } */
 
   .header.active .header-bottom {
     position: fixed;
