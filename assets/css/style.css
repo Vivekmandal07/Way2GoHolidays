@@ -752,6 +752,80 @@ body { background: var(--white); }
   100% { background-position: 0% 50%; }
 }
 
+/* Orbiting sin-like animated dots around CTA button */
+.orbit-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orbiters {
+  position: absolute;
+  inset: 0;
+  display: block;
+  pointer-events: none;
+}
+
+.orbiter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+  /* initial offset using CSS variables: angle and radius */
+  --r: calc(var(--radius, 72px));
+  --a: var(--angle, 0deg);
+  width: var(--size, 10px);
+  height: var(--size, 10px);
+  margin: calc(var(--size, 10px) / -2);
+  animation: rotate-orbit var(--duration, 10s) linear infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+.orbiter-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--color, #ffd166);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+  transform-origin: center center;
+  /* radius pulse + slight sinusoidal effect approximated with scale + translate animation */
+  animation: pulse-radius var(--pulse, 3.6s) ease-in-out infinite;
+}
+
+@keyframes rotate-orbit {
+  from { transform: rotate(var(--a)) translate(var(--r)) rotate(calc(-1 * var(--a))); }
+  to   { transform: rotate(calc(var(--a) + 360deg)) translate(var(--r)) rotate(calc(-1 * (var(--a) + 360deg))); }
+}
+
+@keyframes pulse-radius {
+  0%   { transform: translateX(0) scale(1); }
+  25%  { transform: translateX(-6%) scale(0.95); }
+  50%  { transform: translateX(0) scale(1.05); }
+  75%  { transform: translateX(6%) scale(0.98); }
+  100% { transform: translateX(0) scale(1); }
+}
+
+/* Hover interactions: scale some orbiters and the button */
+.orbit-wrap:hover .glow-btn {
+  transform: scale(1.08);
+}
+
+.orbit-wrap:hover .orbiter-inner:nth-child(odd) {
+  transform: scale(1.35);
+  transition: transform 0.35s ease;
+}
+
+.orbit-wrap:hover .orbiter-inner:nth-child(even) {
+  transform: scale(1.05);
+  transition: transform 0.35s ease;
+}
+
+/* Reduce motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .orbiter, .orbiter-inner { animation: none !important; }
+}
+
 
 
 
@@ -1380,3 +1454,241 @@ address {
   .container { max-width: 1180px; }
 
 }
+
+/* sdfghj */
+
+   
+   .btn-box  a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color:#03e9f4;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 25px;
+   
+    letter-spacing: 2px
+  }
+ 
+  .btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background: #1aeef5;
+    transform: skewX(35deg);
+    transition: 1s;
+    z-index: -1; 
+    transition: 1s;
+   
+    } 
+    .btn-box a:hover::before{
+      width: 100%;
+      cursor: pointer;
+     }  
+  
+  .btn-box a:hover {
+   color: #fff;
+    transition-delay:0s, 1s ;
+    
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+  }
+  
+  .btn-box a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .btn-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .btn-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .btn-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .btn-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+
+  /* Apply same animated border styles to header Book Now button (.btn-animated) */
+  .btn-animated {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    background: transparent;
+    border-radius: 30px;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 2px;
+  }
+
+  .btn-animated::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background: #1aeef5;
+    transform: skewX(35deg);
+    transition: 1s;
+    z-index: -1; 
+  }
+
+  .btn-animated:hover::before{
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .btn-animated:hover {
+    color: #fff;
+    transition-delay:0s, 1s ;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+  }
+
+  /* Scale on hover/focus for better affordance */
+
+  /* .btn-animated:hover,
+  .btn-animated:focus {
+    transform: scale(1.06);
+    outline: none;
+  } */
+
+  /* If the button also has the glow .glow-btn pseudo styles, make sure glow scales too  */
+  /* .btn-animated.glow-btn::before {
+    transform-origin: center center;
+    transition: transform 0.22s cubic-bezier(.2,.9,.2,1);
+  } */
+
+  .btn-animated.glow-btn:hover::before {
+    transform: scale(1.06);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn-animated, .btn-animated span, .btn-animated::before { transition: none !important; transform: none !important; animation: none !important; }
+  }
+
+  .btn-animated span {
+    position: absolute;
+    display: block;
+  }
+
+  .btn-animated span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+  }
+
+  .btn-animated span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s;
+  }
+
+  .btn-animated span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s;
+  }
+
+  .btn-animated span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s;
+  }

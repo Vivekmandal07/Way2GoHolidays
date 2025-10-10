@@ -55,7 +55,7 @@
         </a>
 
         <a href="#" class="logo">
-          <h3 class="h3 hero-title" text-size="">Way2GoHolidays</h3> 
+          <h3 class="h3 hero-title" text-size="">Way2GoHolidays</h3>
           <!--<img src="./assets/images/logo.svg" alt="Way2GoHolidays logo" height="62px" width="300px">  -->
         </a>
 
@@ -80,18 +80,14 @@
         <ul class="social-list">
 
           <li>
-  <a 
-    href="https://wa.me/7303402841" 
-    class="social-link" 
-    target="_blank" 
-    rel="noopener noreferrer"
-  >
-    <ion-icon name="logo-whatsapp"></ion-icon>
-  </a>
-</li>
+            <a href="https://wa.me/7303402841" class="social-link" target="_blank" rel="noopener noreferrer">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
 
           <li>
-            <a href="https://www.instagram.com/way2goholidays?igsh=MTJ2cm9nMnBvcnl2Zw%3D%3D&utm_source=qr" class="social-link">
+            <a href="https://www.instagram.com/way2goholidays?igsh=MTJ2cm9nMnBvcnl2Zw%3D%3D&utm_source=qr"
+              class="social-link">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
@@ -129,7 +125,7 @@
             </button>
 
           </div>
-         
+
           <ul class="navbar-list">
 
             <li>
@@ -160,25 +156,38 @@
 
         </nav>
 
-        <button class="btn btn-primary" id="bookNowBtn">Book Now</button>
+        <button class="btn btn-primary btn-animated btn-box" id="bookNowBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Book Now
+        </button>
 
         <!-- Booking Modal -->
-        <div id="bookingModal" class="modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.4);">
-          <div style="background:#fff; margin:3% auto; padding:32px 32px 24px 32px; border-radius:12px; max-width:700px; width:90%; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
-            <span id="closeModal" style="position:absolute; top:18px; right:32px; font-size:32px; font-weight:bold; color:#333; cursor:pointer;">&times;</span>
+        <div id="bookingModal" class="modal"
+          style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.4);">
+          <div
+            style="background:#fff; margin:3% auto; padding:32px 32px 24px 32px; border-radius:12px; max-width:700px; width:90%; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+            <span id="closeModal"
+              style="position:absolute; top:18px; right:32px; font-size:32px; font-weight:bold; color:#333; cursor:pointer;">&times;</span>
             <h2 style="margin-bottom:24px; text-align:center;">Book Your Trip</h2>
             <form id="bookingForm">
               <div style="margin-bottom:16px;">
-                <input id="modalName" type="text" name="name" required placeholder="Name" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+                <input id="modalName" type="text" name="name" required placeholder="Name"
+                  style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
               </div>
               <div style="margin-bottom:16px;">
-                <input id="modalEmail" type="email" name="email" required placeholder="Email" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+                <input id="modalEmail" type="email" name="email" required placeholder="Email"
+                  style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
               </div>
               <div style="margin-bottom:16px;">
-                <input id="modalPhone" type="tel" name="phone" required placeholder="Phone Number" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+                <input id="modalPhone" type="tel" name="phone" required placeholder="Phone Number"
+                  style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
               </div>
               <div style="margin-bottom:16px;">
-                <select id="modalDestination" name="destination" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+                <select id="modalDestination" name="destination" required
+                  style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
                   <option value="" disabled selected>Destination (Country)</option>
                   <option value="Malaysia">Europe</option>
                   <option value="Thailand">Thailand</option>
@@ -208,20 +217,25 @@
                 </select>
               </div>
               <div style="margin-bottom:16px;">
-                <input id="modalDate" type="date" name="date" required placeholder="Date of Travel" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+                <input id="modalDate" type="date" name="date" required placeholder="Date of Travel"
+                  style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
               </div>
               <div style="margin-bottom:16px;">
-                <input id="modalPax" type="number" name="pax" required min="1" placeholder="No. of Pax" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+                <input id="modalPax" type="number" name="pax" required min="1" placeholder="No. of Pax"
+                  style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
               </div>
               <div style="margin-bottom:16px;">
-                <input id="modalChild" type="number" name="child" min="0" value="0" placeholder="Number of Children" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+                <input id="modalChild" type="number" name="child" min="0" value="0" placeholder="Number of Children"
+                  style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
               </div>
               <div id="childAgesContainer" style="margin-bottom:16px;"></div>
               <div style="margin-bottom:24px;">
-                <textarea id="modalRequest" name="request" placeholder="Special Request" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; min-height:60px;"></textarea>
+                <textarea id="modalRequest" name="request" placeholder="Special Request"
+                  style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; min-height:60px;"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary" style="width:100%; font-size:18px; padding:12px 0;">Submit</button>
-              
+              <button type="submit" class="btn btn-primary"
+                style="width:100%; font-size:18px; padding:12px 0;">Submit</button>
+
             </form>
           </div>
         </div>
@@ -242,22 +256,22 @@
       -->
 
       <section class="hero" id="home">
-  <div class="hero-bg-slider"></div>
-  <div class="container" style="position:relative; z-index:2;">
-    <h2 class="h1 hero-title">Explore the world with Way2GoHolidays</h2>
-    <p class="hero-text">
-      ⛰️✨ Adventure is calling, and the world is waiting 🌍✈️. 
-      Whether it’s 🏖️ beaches, 🏔️ mountains, 
-      or 🌆 city escapes, Way2GoHolidays brings every journey to life 💫. 
-      🧳🌴 Explore deeper, 🌟 travel smarter, 
-      and ❤️ embrace unforgettable moments 🌅🌸.
-    </p>
-    <div class="btn-group">
-      <button class="btn btn-primary">Learn more</button>
-      <button class="btn btn-secondary" id="bookNowBtnHero">Book now</button>
-    </div>
-  </div>
-</section>
+        <div class="hero-bg-slider"></div>
+        <div class="container" style="position:relative; z-index:2;">
+          <h2 class="h1 hero-title">Explore the world with Way2GoHolidays</h2>
+          <p class="hero-text">
+            ⛰️✨ Adventure is calling, and the world is waiting 🌍✈️.
+            Whether it’s 🏖️ beaches, 🏔️ mountains,
+            or 🌆 city escapes, Way2GoHolidays brings every journey to life 💫.
+            🧳🌴 Explore deeper, 🌟 travel smarter,
+            and ❤️ embrace unforgettable moments 🌅🌸.
+          </p>
+          <div class="btn-group">
+            <button class="btn btn-primary">Learn more</button>
+            <button class="btn btn-secondary" id="bookNowBtnHero">Book now</button>
+          </div>
+        </div>
+      </section>
 
 
 
@@ -320,9 +334,9 @@
           <h2 class="h2 section-title">Popular destination</h2>
 
           <p class="section-text">
-            ✨Discover must-visit spots around the world that travelers can’t stop talking about. 
-             Start your next adventure here.Every destination is handpicked to inspire, excite, 
-             and create unforgettable memories.
+            ✨Discover must-visit spots around the world that travelers can’t stop talking about.
+            Start your next adventure here.Every destination is handpicked to inspire, excite,
+            and create unforgettable memories.
           </p>
 
           <ul class="popular-list">
@@ -346,7 +360,8 @@
                     <a href="#">Bangkok & Phuket</a>
                   </h3>
                   <p class="card-text">
-                    Discover the vibrant street life, stunning beaches, and rich culture of Thailand. Perfect for adventure and relaxation.
+                    Discover the vibrant street life, stunning beaches, and rich culture of Thailand. Perfect for
+                    adventure and relaxation.
                   </p>
                 </div>
               </div>
@@ -396,7 +411,8 @@
                     <a href="#">Ubud & Seminyak</a>
                   </h3>
                   <p class="card-text">
-                    Enjoy Bali’s lush landscapes, tranquil beaches, and vibrant arts scene. A paradise for every traveler.
+                    Enjoy Bali’s lush landscapes, tranquil beaches, and vibrant arts scene. A paradise for every
+                    traveler.
                   </p>
                 </div>
               </div>
@@ -421,7 +437,8 @@
                     <a href="#">Hanoi & Ho Chi Minh</a>
                   </h3>
                   <p class="card-text">
-                    Explore Vietnam’s ancient cities, breathtaking bays, and delicious cuisine. A journey through history and nature.
+                    Explore Vietnam’s ancient cities, breathtaking bays, and delicious cuisine. A journey through
+                    history and nature.
                   </p>
                 </div>
               </div>
@@ -446,7 +463,8 @@
                     <a href="#">Marina Bay & Sentosa</a>
                   </h3>
                   <p class="card-text">
-                    Discover Singapore’s futuristic skyline, world-class attractions, and multicultural charm. Perfect for families and explorers.
+                    Discover Singapore’s futuristic skyline, world-class attractions, and multicultural charm. Perfect
+                    for families and explorers.
                   </p>
                 </div>
               </div>
@@ -471,7 +489,8 @@
                     <a href="#">Luxurious overwater bungalows</a>
                   </h3>
                   <p class="card-text">
-                    The Maldives is famed for overwater villas, turquoise beaches, coral reefs, diving, and romantic getaways.  
+                    The Maldives is famed for overwater villas, turquoise beaches, coral reefs, diving, and romantic
+                    getaways.
                   </p>
                 </div>
               </div>
@@ -488,7 +507,8 @@
         <div class="container">
           <p class="section-subtitle">Domestic Destination</p>
           <h2 class="h2 section-title">Popular Indian Places</h2>
-          <p class="section-text">Explore the best destinations across India, from vibrant cities to tranquil nature escapes.</p>
+          <p class="section-text">Explore the best destinations across India, from vibrant cities to tranquil nature
+            escapes.</p>
           <ul class="popular-list">
             <li>
               <div class="popular-card">
@@ -505,8 +525,8 @@
                   </div>
                   <p class="card-subtitle"><a href="#">Kerala</a></p>
                   <h3 class="h3 card-title"><a href="#">God's Own Country</a></h3>
-                  <p class="card-text">Kerala is famed for its natural beauty, tea plantations, 
-                    beaches, rich culture, festivals, and cuisine.  </p>
+                  <p class="card-text">Kerala is famed for its natural beauty, tea plantations,
+                    beaches, rich culture, festivals, and cuisine. </p>
                 </div>
               </div>
             </li>
@@ -525,7 +545,8 @@
                   </div>
                   <p class="card-subtitle"><a href="#">Goa</a></p>
                   <h3 class="h3 card-title"><a href="#">Beaches & Nightlife</a></h3>
-                  <p class="card-text">Relax on golden beaches, enjoy water sports, and party in India’s favorite coastal state.</p>
+                  <p class="card-text">Relax on golden beaches, enjoy water sports, and party in India’s favorite
+                    coastal state.</p>
                 </div>
               </div>
             </li>
@@ -544,7 +565,8 @@
                   </div>
                   <p class="card-subtitle"><a href="#">Rishikesh</a></p>
                   <h3 class="h3 card-title"><a href="#">Ganga Aarti & Adventure</a></h3>
-                  <p class="card-text">Find peace with yoga, river rafting, and spiritual experiences on the banks of the Ganges.</p>
+                  <p class="card-text">Find peace with yoga, river rafting, and spiritual experiences on the banks of
+                    the Ganges.</p>
                 </div>
               </div>
             </li>
@@ -563,7 +585,8 @@
                   </div>
                   <p class="card-subtitle"><a href="#">Varanasi</a></p>
                   <h3 class="h3 card-title"><a href="#">Ghats & Temples</a></h3>
-                  <p class="card-text">Witness ancient rituals, spiritual energy, and the timeless beauty of India’s oldest city.</p>
+                  <p class="card-text">Witness ancient rituals, spiritual energy, and the timeless beauty of India’s
+                    oldest city.</p>
                 </div>
               </div>
             </li>
@@ -582,7 +605,8 @@
                   </div>
                   <p class="card-subtitle"><a href="#">Rajasthan</a></p>
                   <h3 class="h3 card-title"><a href="#">Jaipur & Hawa Mahal</a></h3>
-                  <p class="card-text">Rajasthan is famous for its rich history of kings, showcased through its majestic forts and palaces.</p>
+                  <p class="card-text">Rajasthan is famous for its rich history of kings, showcased through its majestic
+                    forts and palaces.</p>
                 </div>
               </div>
             </li>
@@ -626,7 +650,7 @@
           <h2 class="h2 section-title">Checkout Our Packeges</h2>
 
           <p class="section-text">
-            Discover the perfect plan tailored to your needs. Whether you're just getting started or scaling up, 
+            Discover the perfect plan tailored to your needs. Whether you're just getting started or scaling up,
             we've got a package designed just for you..
           </p>
 
@@ -644,11 +668,13 @@
                   <h3 class="h3 card-title">Glimpses of Europe 2025</h3>
 
                   <p class="card-text">
-                    A Bestseller Tour, which offers a beautyful experience in Europe at an affordable budget. 
-                    The tour is medium paced (days usually start at 9 am in the morning and ends by 9 pm). 
-                    It involves stay in comfortable 4 star hotels (typically in the outskirts of cities between 25-30 km from city center). 
-                    There are delicious Indian meals provided on tour and also a full time experienced tour manager (who speaks Hindi and English)
-                     accompanies the group to take care of their needs.
+                    A Bestseller Tour, which offers a beautyful experience in Europe at an affordable budget.
+                    The tour is medium paced (days usually start at 9 am in the morning and ends by 9 pm).
+                    It involves stay in comfortable 4 star hotels (typically in the outskirts of cities between 25-30 km
+                    from city center).
+                    There are delicious Indian meals provided on tour and also a full time experienced tour manager (who
+                    speaks Hindi and English)
+                    accompanies the group to take care of their needs.
                   </p>
 
                   <ul class="card-meta-list">
@@ -697,7 +723,7 @@
                   </div>
 
                   <p class="price">
-                    ₹230,000 
+                    ₹230,000
                     <span>/ per person</span>
                   </p>
 
@@ -712,7 +738,8 @@
               <div class="package-card">
 
                 <figure class="card-banner">
-                  <img src="./assets/images/packege-1 pattaya Beach.png" alt="Experience The Great Holiday On Beach" loading="lazy">
+                  <img src="./assets/images/packege-1 pattaya Beach.png" alt="Experience The Great Holiday On Beach"
+                    loading="lazy">
                 </figure>
 
                 <div class="card-content">
@@ -720,8 +747,10 @@
                   <h3 class="h3 card-title">Experience The Great Holiday On Pattaya Beach (Thailand)</h3>
 
                   <p class="card-text">
-                    Unwind on golden sands, enjoy thrilling water sports, and experience the vibrant nightlife of Pattaya Beach.
-                    Indulge in delicious local cuisine, explore the pattaya coral islands, and make memories that last a lifetime.
+                    Unwind on golden sands, enjoy thrilling water sports, and experience the vibrant nightlife of
+                    Pattaya Beach.
+                    Indulge in delicious local cuisine, explore the pattaya coral islands, and make memories that last a
+                    lifetime.
                   </p>
 
                   <ul class="card-meta-list">
@@ -770,7 +799,7 @@
                   </div>
 
                   <p class="price">
-                    ₹25,000 
+                    ₹25,000
                     <span>/ per person</span>
                   </p>
 
@@ -785,7 +814,8 @@
               <div class="package-card">
 
                 <figure class="card-banner">
-                  <img src="./assets/images/packege-2 Burjkhalifa.png" alt="get the Great Experience of Burjkhalifa" loading="lazy">
+                  <img src="./assets/images/packege-2 Burjkhalifa.png" alt="get the Great Experience of Burjkhalifa"
+                    loading="lazy">
                 </figure>
 
                 <div class="card-content">
@@ -793,7 +823,8 @@
                   <h3 class="h3 card-title">Discover the Magic of Dubai Where Luxury Meets Adventure</h3>
 
                   <p class="card-text">
-                    Discover Dubai’s stunning skyline, thrilling desert safaris, luxury shopping, and vibrant culture—all in one unforgettable destination
+                    Discover Dubai’s stunning skyline, thrilling desert safaris, luxury shopping, and vibrant
+                    culture—all in one unforgettable destination
                   </p>
 
                   <ul class="card-meta-list">
@@ -858,7 +889,8 @@
               <div class="package-card">
 
                 <figure class="card-banner">
-                  <img src="./assets/images/packege-3 Bali.png" alt="Santorini Island's Weekend Vacation" loading="lazy">
+                  <img src="./assets/images/packege-3 Bali.png" alt="Santorini Island's Weekend Vacation"
+                    loading="lazy">
                 </figure>
 
                 <div class="card-content">
@@ -866,7 +898,8 @@
                   <h3 class="h3 card-title">Escape to Paradise: Explore the Wonders of Bali</h3>
 
                   <p class="card-text">
-                    Experience Bali’s pristine beaches, lush landscapes, and vibrant culture. Relax, explore, and create unforgettable memories.
+                    Experience Bali’s pristine beaches, lush landscapes, and vibrant culture. Relax, explore, and create
+                    unforgettable memories.
                   </p>
 
                   <ul class="card-meta-list">
@@ -934,8 +967,29 @@
         </div>
       </section>
 
-
-
+      <div className="btn-box w-full  
+                md:flex gap-4
+               
+                 md:max-lg:text-[15px]
+                  text-[23px] 
+                  font-medium 
+                  lg:text-[98%]  
+                 ">
+        <a href={cv} className="btn  exs:max-sm:w-full   " download="DpkRnResume">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Download CV <i className="fa-solid fa-download"></i>
+        </a>
+        <a href="#contactSection" className="btn exs:max-sm:w-full  ">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Let's Talk
+        </a>
+      </div>
 
 
       <!-- 
@@ -950,8 +1004,10 @@
           <h2 class="h2 section-title">Photo's From Travellers</h2>
 
           <p class="section-text">
-            Discover the amazing moments captured by our travellers. From breathtaking landscapes to unforgettable experiences, 
-            these snapshots bring their journeys to life. Explore the adventures, feel the excitement, and get inspired for your next trip.
+            Discover the amazing moments captured by our travellers. From breathtaking landscapes to unforgettable
+            experiences,
+            these snapshots bring their journeys to life. Explore the adventures, feel the excitement, and get inspired
+            for your next trip.
           </p>
 
           <ul class="gallery-list">
@@ -1062,13 +1118,42 @@
             <h2 class="h2 section-title">Ready For Unforgatable Travel with Way2GoHolidays. Remember Us!</h2>
 
             <p class="section-text">
-              Embark on journeys filled with adventure, relaxation, and unforgettable memories. 
-              With Way2GoHolidays, every trip is crafted to give you experiences you’ll cherish forever. 
+              Embark on journeys filled with adventure, relaxation, and unforgettable memories.
+              With Way2GoHolidays, every trip is crafted to give you experiences you’ll cherish forever.
               Let us make your travel dreams a reality!
             </p>
           </div>
 
-          <button class="glow-btn" onclick="window.location.href='tel:+917303402841'">Contact Us !</button>
+          <div class="orbit-wrap">
+            <div class="orbiters" aria-hidden="true">
+              <div class="orbiter"
+                style="--angle:0deg;   --radius:72px; --size:10px; --duration:10s; --pulse:3.6s; --delay:0s;  --color:#ffd166;">
+                <div class="orbiter-inner"></div>
+              </div>
+              <div class="orbiter"
+                style="--angle:60deg;  --radius:86px; --size:8px;  --duration:12s; --pulse:3s;   --delay:-1s; --color:#06d6a0;">
+                <div class="orbiter-inner"></div>
+              </div>
+              <div class="orbiter"
+                style="--angle:120deg; --radius:64px; --size:12px; --duration:8.5s;--pulse:4s;   --delay:-2s; --color:#118ab2;">
+                <div class="orbiter-inner"></div>
+              </div>
+              <div class="orbiter"
+                style="--angle:180deg; --radius:78px; --size:9px;  --duration:11s; --pulse:3.2s; --delay:-0.5s; --color:#ef476f;">
+                <div class="orbiter-inner"></div>
+              </div>
+              <div class="orbiter"
+                style="--angle:240deg; --radius:98px; --size:7px;  --duration:13s; --pulse:2.8s; --delay:-1.6s; --color:#f4a261;">
+                <div class="orbiter-inner"></div>
+              </div>
+              <div class="orbiter"
+                style="--angle:300deg; --radius:56px; --size:11px; --duration:9.5s; --pulse:3.8s; --delay:-0.8s; --color:#9b5de5;">
+                <div class="orbiter-inner"></div>
+              </div>
+            </div>
+
+            <button class="glow-btn" onclick="window.location.href='tel:+917303402841'">Contact Us !</button>
+          </div>
 
         </div>
       </section>
@@ -1096,9 +1181,9 @@
           </a>
 
           <p class="footer-text"> <B>Way2GoHolidays</B><br>
-            "Way2GoHolidays is dedicated to making your travel 
-            dreams come true. From exotic getaways to hassle-free planning, 
-            we ensure every journey is smooth, memorable, 
+            "Way2GoHolidays is dedicated to making your travel
+            dreams come true. From exotic getaways to hassle-free planning,
+            we ensure every journey is smooth, memorable,
             and filled with experiences you’ll cherish forever."
           </p>
 
@@ -1185,36 +1270,38 @@
     - #FLOATING WHATSAPP BUTTON
   -->
   <style>
-  #floatingWhatsappBtn {
-    position: fixed;
-    right: 28px;
-    bottom: 84px; /* above the go-top arrow */
-    z-index: 99999;
-    background: #25d366;
-    color: #fff;
-    border-radius: 50%;
-    width: 54px;
-    height: 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-    cursor: pointer;
-    font-size: 32px;
-    transition: box-shadow 0.2s;
-  }
-  #floatingWhatsappBtn:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.28);
-  }
-</style>
-<div id="floatingWhatsappBtn" title="Chat with us on WhatsApp">
-  <ion-icon name="logo-whatsapp"></ion-icon>
-</div>
-<script>
-  document.getElementById('floatingWhatsappBtn').onclick = function() {
-    window.open('https://wa.me/7303402841', '_blank');
-  };
-</script>
+    #floatingWhatsappBtn {
+      position: fixed;
+      right: 28px;
+      bottom: 84px;
+      /* above the go-top arrow */
+      z-index: 99999;
+      background: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+      cursor: pointer;
+      font-size: 32px;
+      transition: box-shadow 0.2s;
+    }
+
+    #floatingWhatsappBtn:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+    }
+  </style>
+  <div id="floatingWhatsappBtn" title="Chat with us on WhatsApp">
+    <ion-icon name="logo-whatsapp"></ion-icon>
+  </div>
+  <script>
+    document.getElementById('floatingWhatsappBtn').onclick = function () {
+      window.open('https://wa.me/7303402841', '_blank');
+    };
+  </script>
 
   <!-- 
     - #BOOKING MODAL
@@ -1222,7 +1309,8 @@
   <style>
     /* Modal styles */
     #bookingModal {
-      display: none; /* Hidden by default */
+      display: none;
+      /* Hidden by default */
       position: fixed;
       z-index: 10000;
       left: 0;
@@ -1230,7 +1318,7 @@
       width: 100%;
       height: 100%;
       overflow: auto;
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0, 0, 0, 0.5);
     }
   </style>
   <div id="bookingModal">
@@ -1238,119 +1326,119 @@
 
 
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const bookNowBtn = document.getElementById("bookNowBtn");
-  const bookingModal = document.getElementById("bookingModal");
-  const closeModal = document.getElementById("closeModal");
-  const bookingForm = document.getElementById("bookingForm");
-  const childInput = document.getElementById("modalChild");
-  const childAgesContainer = document.getElementById("childAgesContainer");
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const bookNowBtn = document.getElementById("bookNowBtn");
+          const bookingModal = document.getElementById("bookingModal");
+          const closeModal = document.getElementById("closeModal");
+          const bookingForm = document.getElementById("bookingForm");
+          const childInput = document.getElementById("modalChild");
+          const childAgesContainer = document.getElementById("childAgesContainer");
 
-  // Open modal
-  bookNowBtn.addEventListener("click", function () {
-    bookingModal.style.display = "block";
-  });
+          // Open modal
+          bookNowBtn.addEventListener("click", function () {
+            bookingModal.style.display = "block";
+          });
 
-  // Close modal
-  closeModal.addEventListener("click", function () {
-    bookingModal.style.display = "none";
-  });
+          // Close modal
+          closeModal.addEventListener("click", function () {
+            bookingModal.style.display = "none";
+          });
 
-  // Close modal when clicking outside content
-  window.addEventListener("click", function (event) {
-    if (event.target == bookingModal) {
-      bookingModal.style.display = "none";
-    }
-  });
+          // Close modal when clicking outside content
+          window.addEventListener("click", function (event) {
+            if (event.target == bookingModal) {
+              bookingModal.style.display = "none";
+            }
+          });
 
-  // Dynamically add child age fields
-  childInput.addEventListener("input", function () {
-    childAgesContainer.innerHTML = "";
-    const childCount = parseInt(this.value) || 0;
-    for (let i = 1; i <= childCount; i++) {
-      const input = document.createElement("input");
-      input.type = "number";
-      input.name = `child_age_${i}`;
-      input.placeholder = `Child ${i} Age`;
-      input.style =
-        "width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; margin-top:8px;";
-      childAgesContainer.appendChild(input);
-    }
-  });
+          // Dynamically add child age fields
+          childInput.addEventListener("input", function () {
+            childAgesContainer.innerHTML = "";
+            const childCount = parseInt(this.value) || 0;
+            for (let i = 1; i <= childCount; i++) {
+              const input = document.createElement("input");
+              input.type = "number";
+              input.name = `child_age_${i}`;
+              input.placeholder = `Child ${i} Age`;
+              input.style =
+                "width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; margin-top:8px;";
+              childAgesContainer.appendChild(input);
+            }
+          });
 
-  // Form submit → WhatsApp
-  bookingForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+          // Form submit → WhatsApp
+          bookingForm.addEventListener("submit", function (e) {
+            e.preventDefault();
 
-    // Get values directly
-    const name = document.getElementById("modalName").value;
-    const email = document.getElementById("modalEmail").value;
-    const phone = document.getElementById("modalPhone").value;
-    const destination = document.getElementById("modalDestination").value;
-    const date = document.getElementById("modalDate").value;
-    const pax = document.getElementById("modalPax").value;
-    const child = document.getElementById("modalChild").value;
-    const request = document.getElementById("modalRequest").value;
+            // Get values directly
+            const name = document.getElementById("modalName").value;
+            const email = document.getElementById("modalEmail").value;
+            const phone = document.getElementById("modalPhone").value;
+            const destination = document.getElementById("modalDestination").value;
+            const date = document.getElementById("modalDate").value;
+            const pax = document.getElementById("modalPax").value;
+            const child = document.getElementById("modalChild").value;
+            const request = document.getElementById("modalRequest").value;
 
-    // Collect child ages
-    let childAges = "";
-    for (let i = 1; i <= (parseInt(child) || 0); i++) {
-      const ageField = document.querySelector(`[name="child_age_${i}"]`);
-      if (ageField) {
-        childAges += `Child ${i} Age: ${ageField.value}\n`;
-      }
-    }
+            // Collect child ages
+            let childAges = "";
+            for (let i = 1; i <= (parseInt(child) || 0); i++) {
+              const ageField = document.querySelector(`[name="child_age_${i}"]`);
+              if (ageField) {
+                childAges += `Child ${i} Age: ${ageField.value}\n`;
+              }
+            }
 
-    // WhatsApp formatted message
-    let msg = "Booking Request\n\n";
-    msg += `Name: ${name}\n`;
-    msg += `Email: ${email}\n`;
-    msg += `Phone: ${phone}\n`;
-    msg += `Destination: ${destination}\n`;
-    msg += `Date of Travel: ${date}\n`;
-    msg += `No. of Pax: ${pax}\n`;
-    msg += `Number of Children: ${child}\n`;
-    msg += childAges;
-    msg += `Special Request: ${request}`;
+            // WhatsApp formatted message
+            let msg = "Booking Request\n\n";
+            msg += `Name: ${name}\n`;
+            msg += `Email: ${email}\n`;
+            msg += `Phone: ${phone}\n`;
+            msg += `Destination: ${destination}\n`;
+            msg += `Date of Travel: ${date}\n`;
+            msg += `No. of Pax: ${pax}\n`;
+            msg += `Number of Children: ${child}\n`;
+            msg += childAges;
+            msg += `Special Request: ${request}`;
 
-    // Debug → show final message in console
-    console.log("WhatsApp message:", msg);
+            // Debug → show final message in console
+            console.log("WhatsApp message:", msg);
 
-    // WhatsApp number (with country code, no +)
-    const whatsappNumber = "917303402841";
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`;
+            // WhatsApp number (with country code, no +)
+            const whatsappNumber = "917303402841";
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`;
 
-    window.open(whatsappURL, "_blank");
-  });
-});
-</script>
-
-
+            window.open(whatsappURL, "_blank");
+          });
+        });
+      </script>
 
 
 
 
 
 
-  <!-- 
+
+
+      <!-- 
     - #GO TO TOP
   -->
 
-  <a href="#top" class="go-top" data-go-top>
-    <ion-icon name="chevron-up-outline" role="img" class="md hydrated" aria-lable="chevron-up-outline"></ion-icon>
-  </a>
-  <!-- 
+      <a href="#top" class="go-top" data-go-top>
+        <ion-icon name="chevron-up-outline" role="img" class="md hydrated" aria-lable="chevron-up-outline"></ion-icon>
+      </a>
+      <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+      <script src="./assets/js/script.js"></script>
 
 
-  <!-- 
+      <!-- 
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
 </body>
