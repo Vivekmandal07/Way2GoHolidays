@@ -59,7 +59,7 @@ const Popular = () => {
                 <div className="card-content">
                   <div className="card-rating">
                     {[...Array(5)].map((_, i) => (
-                      <ion-icon key={i} name="star"></ion-icon>
+                      <ion-icon key={i} name="star">xxx</ion-icon>
                     ))}
                   </div>
                   <p className="card-subtitle">
