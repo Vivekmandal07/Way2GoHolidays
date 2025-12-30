@@ -216,16 +216,17 @@
                   <option value="Other">Other</option>
                 </select>
               </div>
-              <div style="margin-bottom:16px;">
+              <div style="margin-bottom:16px; position:relative; display:flex; align-items:center;">
                 <input id="modalDate" type="date" name="date" required placeholder="Date of Travel"
-                  style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
+                  style="width:100%; padding:10px 45px 10px 10px; border:1px solid #ccc; border-radius:6px; font-size:16px;">
+              <ion-icon name="calendar-outline" style="position:absolute; right:12px; pointer-events:none; color:#666; font-size:24px; z-index:1;"></ion-icon> 
               </div>
               <div style="margin-bottom:16px;">
                 <input id="modalPax" type="number" name="pax" required min="1" placeholder="No. of Pax"
                   style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
               </div>
               <div style="margin-bottom:16px;">
-                <input id="modalChild" type="number" name="child" min="0" value="0" placeholder="Number of Children"
+                <input id="modalChild" type="number" name="child" min="0" placeholder="Number of Children"
                   style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px;">
               </div>
               <div id="childAgesContainer" style="margin-bottom:16px;"></div>
