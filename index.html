@@ -1327,16 +1327,24 @@
       <script>
         document.addEventListener("DOMContentLoaded", function () {
           const bookNowBtn = document.getElementById("bookNowBtn");
+          const bookNowBtnHero = document.getElementById("bookNowBtnHero");
           const bookingModal = document.getElementById("bookingModal");
           const closeModal = document.getElementById("closeModal");
           const bookingForm = document.getElementById("bookingForm");
           const childInput = document.getElementById("modalChild");
           const childAgesContainer = document.getElementById("childAgesContainer");
 
-          // Open modal
+          // Open modal from header
           bookNowBtn.addEventListener("click", function () {
             bookingModal.style.display = "block";
           });
+
+          // Open modal from hero button (if present)
+          if (bookNowBtnHero) {
+            bookNowBtnHero.addEventListener("click", function () {
+              bookingModal.style.display = "block";
+            });
+          }
 
           // Close modal
           closeModal.addEventListener("click", function () {
