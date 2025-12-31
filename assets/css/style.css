@@ -465,6 +465,8 @@ section:not(.cta) :is(.section-subtitle, .section-title, .section-text) {
   padding: 10px 15px;
   font-size: var(--fs-5);
   border-radius: 50px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .tour-search-form .input-field::placeholder { color: var(--spanish-gray); }
@@ -472,6 +474,12 @@ section:not(.cta) :is(.section-subtitle, .section-title, .section-text) {
 .tour-search-form .input-field::-webkit-datetime-edit {
   color: var(--spanish-gray);
   text-transform: uppercase;
+}
+
+/* Adjust calendar picker icon padding for mobile */
+.tour-search-form input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding-right: 8px;
 }
 
 .tour-search-form .input-wrapper { margin-bottom: 15px; }
