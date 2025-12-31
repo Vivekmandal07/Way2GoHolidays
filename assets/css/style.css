@@ -593,7 +593,10 @@ body { background: var(--white); }
 
 .package-card .card-content { padding: 30px 20px; }
 
-.package-card .card-title { margin-bottom: 15px; }
+.package-card .card-title { 
+  margin-bottom: 15px; 
+  font-size: 25px;
+}
 
 .package-card .card-text {
   line-height: 1.6;
@@ -1231,6 +1234,8 @@ address {
   .package-card .card-banner { height: 100%; }
 
   .package-card .card-content { padding: 40px; }
+
+  .package-card .card-title { font-size: 18px; }
 
   .package-card .card-price {
     display: grid;
