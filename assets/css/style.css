@@ -223,6 +223,11 @@ body { background: var(--white); }
   margin-bottom: 30px;
 }
 
+/* Ensure section headings and related text are centered on small screens */
+section:not(.cta) :is(.section-subtitle, .section-title, .section-text) {
+  text-align: center;
+}
+
 .card-text {
   color: var(--black-coral);
   font-size: var(--fs-5);
