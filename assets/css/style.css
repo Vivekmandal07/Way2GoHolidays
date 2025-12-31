@@ -29,7 +29,7 @@
 \*-----------------------------------*/
 
 /**
- * copyright 2022 codewithsadee
+ * copyright 2022 codewithphantom
  */
 
 
@@ -490,6 +490,18 @@ body { background: var(--white); }
 
 .popular-list,
 .popular-list > li:not(:last-child) { margin-bottom: 30px; }
+
+/* Make popular section titles and card titles larger on all devices
+   and scale down slightly on very small screens. This ensures the
+   increased size appears on mobile as well as desktop. */
+.popular .section-title { font-size: 40px; }
+.popular .section-subtitle { font-size: 14px; }
+.popular-card .card-title { font-size: 20px; }
+
+@media (max-width: 480px) {
+  .popular .section-title { font-size: 22px; }
+  .popular-card .card-title { font-size: 20px; }
+}
 
 .popular-card {
   position: relative;
